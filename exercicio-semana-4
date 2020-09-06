@@ -1,0 +1,56 @@
+// DESAFIO - validador de cartão de crédito
+
+// Todos os números de cartão de crédito têm uma sequência que pode ser validada através de um algoritmo chamado Algoritmo de Luhn. Para validar qualquer número de cartão de crédito (o padrão de 16 dígitos), siga os seguintes passos:
+
+// 1. Retire o último dígito do número. Ele é o verificador;
+// 2. Escreva os números na ordem inversa;
+// 3. Multiplique os dígitos das casas ímpares por 2 e subtraia 9 de todos os resultados maiores que 9;
+// 4. Some todos os números;
+// 5. O dígito verificador (aquele do passo 1) é o número que você precisa somar a todos os outros números somados para fazer a validação;
+// 6. O número de cartão de crédito será válido caso o total (do passo 5) seja múltiplo de 10 (ou seja, numero % 10 === 0)
+
+// Números de cartões válidos para teste:
+
+// 5555666677778884 - Vou testar este
+// 5485755481460022
+// 5141331902596939
+// 5381579886310193
+// 5261400319746371
+
+const cartao = [5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 4]
+
+///1ª etapa
+
+const  ultimoDigito = cartao.pop()
+  console.log(`Esta é a array ultimoDigito: ${ultimoDigito}`)
+  console.log(`Esta é a array cartao após o pop: ${cartao}`)
+
+///2ª etapa
+
+const cartaoInvertido = cartao.reverse()
+  console.log(`Esta é a array cartaoInvertido: ${cartaoInvertido}`)
+
+///3ª etapa
+
+const sub = []
+const mult = []
+const somaImpar = []
+let i = 0
+
+for (let i = 0; i < cartaoInvertido.length; i++) {
+  if (cartaoInvertido[i%2 === 0]) {
+    const mult = cartaoInvertido[i]*2;
+    if (mult > 9) {
+    const sub = (mult - 9).push();
+  
+    }
+  } 
+   
+}
+
+
+////////////////////////////////////
+///// Ju, infelizmente não tive tempo hábil para estudar e me dedicar aos exercícios esta semana. 
+///// Tou enviando até onde consegui fazer, por conta da presença;
+///// Vou enviar a PR desta forma, porém continuarei a resolução dela após isto, para praticar. 
+///// Obrigada e desculpa <3 
